@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{>cus}}
+    <body>
+
+<center style="position: absolute;transform: translate(-50%, -55%);text-align: center;left: 50%;top: 45%;">
+        <div class="card" style="width: 18rem;">
+            
+            <div class="card-body">
+                {{#each result}}
+                    <h5 class="card-title">Name : {{this.name}}</h5>
+                    <h5 class="card-title">City : {{this.city}}</h5>
+                    <h5 class="card-title">AccountNumber : {{this.accountNumber}}</h5>
+                    <h5 class="card-title">Balance : {{this.balance}}</h5>
+                    <a href="/tf/{{this.accountNumber}}" class="btn btn-primary">transfermoney</a><br><br>
+                    <a href="/history/{{this.accountNumber}}" class="btn btn-primary">view transation</a>
+              
+                  {{/each}}
+               
+            </div>
+        </div>
+</center>
+    </body>
+</html>

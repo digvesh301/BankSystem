@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>header}}
+</head>
+<body>
+  <div class="description">
+    <table class="table table-primary">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">AccountNumber</th>
+      <th scope="col">city</th>
+      <th scope="col">balance</th>
+    </tr>
+    {{#each name}}
+            <tr></tr>
+            <td>{{this.name}}</td>
+            <td>{{this.accountNumber}}</td>
+            <td>{{this.city}}</td>
+            <td>{{this.balance}}</td>
+            <td><form action="/onecustomer/{{this.accountNumber}}">
+   
+               <input type="submit" value="select">
+            </form></td>
+            </tr>
+            
+             {{/each}}
+  </thead>
+  <tbody>
+    
+  </tbody>
+</table>
+</div>
+    
+</body>
+</html>
